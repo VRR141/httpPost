@@ -10,10 +10,10 @@ import java.io.IOException;
 
 public class GetPosts {
 
-    private final String url;
+    private final String URL;
 
     public GetPosts(String url){
-        this.url = url;
+        this.URL = url;
     }
 
     private CloseableHttpClient createHttpClient(){
@@ -23,7 +23,7 @@ public class GetPosts {
     }
 
     private HttpGet createRequest(){
-        HttpGet request = new HttpGet(url);
+        HttpGet request = new HttpGet(URL);
         request.setHeader(HttpHeaders.ACCEPT, ContentType.APPLICATION_JSON.getMimeType());
         return request;
     }

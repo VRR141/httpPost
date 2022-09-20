@@ -7,11 +7,11 @@ import java.util.List;
 
 public class Main {
 
-    private static final String url = "https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats";
+    private static final String URL = "https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats";
 
     public static void main(String[] args) {
         ObjectMapper objectMapper = new ObjectMapper();
-        GetPosts getPosts = new GetPosts(url);
+        GetPosts getPosts = new GetPosts(URL);
         try (CloseableHttpResponse response = getPosts.createHttpResponse()) {
             List<Post> posts = objectMapper
                     .readValue(response.getEntity().getContent(), new TypeReference<>() {

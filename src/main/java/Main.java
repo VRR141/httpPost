@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Main {
 
-    private static final String URL = "https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats";
+    public static final String URL = "https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats";
 
     public static void main(String[] args) {
         ObjectMapper objectMapper = new ObjectMapper();
